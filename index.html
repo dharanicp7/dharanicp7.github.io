@@ -5,16 +5,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dharani Kiran — Full Stack Developer</title>
-    <meta name="description" content="Dharani Kiran C S — Full-stack engineer building enterprise workflow automation, BPMN/Camunda systems, and database-driven applications across MedTech, government, and B2B domains." />
+    <meta name="description" content="Dharani Kiran C S. Full-stack engineer building enterprise workflow automation, BPMN/Camunda systems, and database-driven applications across MedTech, government, and B2B domains." />
     <meta name="theme-color" content="#0A0D12" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dharani-kiran.github.io/" />
     <meta property="og:title" content="Dharani Kiran — Full Stack Developer" />
     <meta property="og:description" content="Full-stack engineer building enterprise workflow automation, BPMN/Camunda systems, and database-driven applications across MedTech, government, and B2B domains." />
-    <meta property="og:image" content="profile.png" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://dharani-kiran.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Dharani Kiran — Full Stack Developer" />
     <meta name="twitter:description" content="Full-stack engineer building enterprise workflow automation, BPMN/Camunda systems, and database-driven applications." />
+    <meta name="twitter:image" content="https://dharani-kiran.github.io/og-image.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dharani Kiran C S",
+      "url": "https://dharani-kiran.github.io/",
+      "jobTitle": "Full Stack Developer",
+      "worksFor": { "@type": "Organization", "name": "Sapphireims" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Anna University (CEG)" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" },
+      "email": "mailto:dropmail.dharanikiran@gmail.com",
+      "sameAs": [
+        "https://github.com/dharanicp7",
+        "https://linkedin.com/in/dharani-kiran"
+      ],
+      "knowsAbout": ["React", "Node.js", "Python", "Camunda BPMN", "SQL", "REST APIs"]
+    }
+    </script>
 
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230A0D12'/%3E%3Crect x='4' y='4' width='56' height='56' rx='7' fill='none' stroke='%234FA8D8' stroke-width='2'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%234FA8D8' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E" />
@@ -22,7 +45,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
     <style>
         :root {
@@ -180,6 +203,56 @@
             list-style: none;
             display: flex;
             gap: 2rem;
+        }
+
+        .nav-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: 1px solid var(--border-strong);
+            border-radius: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .nav-toggle:hover {
+            border-color: var(--accent);
+        }
+
+        .nav-toggle-bars {
+            position: relative;
+            width: 16px;
+            height: 10px;
+        }
+
+        .nav-toggle-bars span {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1.5px;
+            background: var(--ink-bright);
+            transition: transform 0.25s ease, opacity 0.25s ease, top 0.25s ease;
+        }
+
+        .nav-toggle-bars span:nth-child(1) { top: 0; }
+        .nav-toggle-bars span:nth-child(2) { top: 4.5px; }
+        .nav-toggle-bars span:nth-child(3) { top: 9px; }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-bars span:nth-child(1) {
+            top: 4.5px;
+            transform: rotate(45deg);
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-bars span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-bars span:nth-child(3) {
+            top: 4.5px;
+            transform: rotate(-45deg);
         }
 
         nav ul a {
@@ -757,6 +830,24 @@
             background: var(--accent-wash);
         }
 
+        .skill-tag.learning {
+            color: var(--signal);
+            border-color: rgba(232, 163, 61, 0.3);
+        }
+
+        .skill-tag.learning:hover {
+            border-color: var(--signal);
+            color: var(--signal);
+            background: var(--signal-wash);
+        }
+
+        .skill-note {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            color: var(--ink-faint);
+            margin-top: 0.9rem;
+        }
+
         /* ---------- projects ---------- */
         #projects {
             padding: 7rem 3rem;
@@ -808,6 +899,18 @@
             margin-bottom: 1.2rem;
         }
 
+        .case-result {
+            font-size: 0.78rem;
+            line-height: 1.75;
+            color: var(--ink-bright);
+            margin-bottom: 1.2rem;
+        }
+
+        .case-result-label {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
@@ -821,6 +924,22 @@
             padding: 0.22rem 0.5rem;
             border: 1px solid var(--border);
             border-radius: 2px;
+            color: var(--accent);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1rem;
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--ink-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .project-link:hover {
             color: var(--accent);
         }
 
@@ -946,8 +1065,41 @@
         @media (max-width: 768px) {
             nav { padding: 1rem 1.5rem; }
             .nav-status { display: none; }
-            nav ul { gap: 0.8rem; }
-            nav ul a { font-size: 0.6rem; }
+            .nav-toggle { display: flex; }
+
+            nav ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: rgba(10, 13, 18, 0.98);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            nav ul.is-open {
+                max-height: 60vh;
+            }
+
+            nav ul li {
+                border-top: 1px solid var(--border);
+            }
+
+            nav ul a {
+                display: flex;
+                align-items: center;
+                min-height: 44px;
+                padding: 0 1.5rem;
+                font-size: 0.7rem;
+            }
+
+            nav ul a::after { display: none; }
+
             #hero { padding: 7rem 1.5rem 3rem; }
             #about { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 3rem; }
             #experience, #skills, #projects, #contact { padding: 4rem 1.5rem; }
@@ -969,11 +1121,15 @@
                 Available for work
             </div>
         </div>
-        <ul>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+            <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+        </button>
+        <ul id="primary-nav">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="resume.html">Résumé</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -983,8 +1139,8 @@
             <div>
                 <p class="hero-eyebrow"><span class="prompt">&gt;</span> full_stack_engineer --location=Chennai,IN</p>
                 <h1 class="hero-name">Dharani<br />Kiran<span class="dot">.</span></h1>
-                <p class="hero-desc">Full-stack developer with 2+ years building scalable systems across MedTech,
-                    government, and enterprise domains — React frontends, Node APIs, BPMN workflow automation, and
+                <p class="hero-desc">Full-stack developer with 3+ years building scalable systems across MedTech,
+                    government, and enterprise domains. React frontends, Node APIs, BPMN workflow automation, and
                     complex database systems, end to end.</p>
 
                 <div class="spec-strip">
@@ -1014,7 +1170,7 @@
 
             <div class="hero-photo">
                 <div class="hero-photo-frame"></div>
-                <img src="profile.png" alt="Portrait of Dharani Kiran" />
+                <img src="profile.jpg" alt="Portrait of Dharani Kiran" width="640" height="960" loading="eager" />
                 <div class="hero-photo-tag">FIG. 01 — PROFILE</div>
             </div>
         </div>
@@ -1024,15 +1180,15 @@
         <div class="reveal">
             <p class="section-label"><span class="idx">§01</span> About Me</p>
             <h2 class="section-title">Full Stack.<br />End to End.<br />Delivered.</h2>
-            <p class="about-text">I'm a full-stack developer with 2+ years of experience across MedTech, government,
-                and enterprise B2B domains. I build complete products — React/Node frontends, RESTful APIs, BPMN
+            <p class="about-text">I'm a full-stack developer with 3+ years of experience across MedTech, government,
+                and enterprise B2B domains. I build complete products: React/Node frontends, RESTful APIs, BPMN
                 workflow automation, database engineering, and data pipelines.</p>
             <p class="about-text">Currently at Sapphireims engineering complex enterprise workflows; previously at TK
                 Propeller Digital Solutions building apps used by real businesses. M.Sc. Information Technology from
                 Anna University (CEG).</p>
             <div class="about-stats">
                 <div class="stat-card">
-                    <div class="stat-num">2+</div>
+                    <div class="stat-num">3+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-card">
@@ -1040,12 +1196,12 @@
                     <div class="stat-label">Companies / Roles</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-num">80%</div>
-                    <div class="stat-label">Process Time Saved</div>
+                    <div class="stat-num">20-30 → 1-2</div>
+                    <div class="stat-label">Weekly Discrepancies Cut, Rasha</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-num">8</div>
-                    <div class="stat-label">Interns Supervised</div>
+                    <div class="stat-label">Dev Team Led, TANFED</div>
                 </div>
             </div>
         </div>
@@ -1126,10 +1282,14 @@
                 <ul class="exp-bullets">
                     <li>Spearheaded development of Veterinary Clinic and Daily Food Delivery apps, boosting user
                         engagement by 80% within 3 months</li>
-                    <li>Engineered full automation for petroleum business operations — inventory tracking, sales
-                        reporting, and financial reconciliation — reducing manual processing time by 80%</li>
-                    <li>Designed intuitive UI/UX in Figma for clinic and e-commerce apps, significantly improving
-                        usability metrics</li>
+                    <li>Solo-built Rasha, a petroleum logistics platform, end to end. After the client was flagging
+                        20-30 discrepancy cases a week from fuel evaporation, theft, and gross/net weight mismatches,
+                        investigated the weighbridge process on-site and rebuilt the detection algorithm around it,
+                        cutting discrepancies to a residual 1-2 a week with a documented manual-override path for the
+                        rest</li>
+                    <li>Designed full UI/UX in Figma for the clinic and food delivery apps — every screen, wireframe
+                        to high-fidelity — then built the interfaces in React Native with NativeBase, extending
+                        frontend skills from web React to cross-platform mobile</li>
                     <li>Maintained high code quality through comprehensive unit and integration testing, reducing
                         post-deployment issues</li>
                 </ul>
@@ -1146,10 +1306,13 @@
                     </div>
                 </div>
                 <ul class="exp-bullets">
-                    <li>Delivered critical ReactJS patch projects for multiple government departments, ensuring
-                        system stability</li>
-                    <li>Contributed to automation for TANFED, Agri Online Sales Portal, and TNeGA — reducing
-                        government processing time by 50%</li>
+                    <li>Recognized for technical contribution among a 10-intern cohort and promoted to lead an
+                        8-developer team on TANFED, a Tamil Nadu state government platform mandated for rollout
+                        across every taluk and regional cooperative office</li>
+                    <li>Built the invoice/receipt PDF generation and SMS notification integration for TNeGA, Tamil
+                        Nadu's e-governance ration distribution (PDS) platform serving every household in the state</li>
+                    <li>Contributed to automation for TANFED, the Agri Online Sales Portal, and TNeGA, reducing
+                        government processing time by 50% across the patch work</li>
                 </ul>
             </div>
             <div class="exp-item reveal" style="transition-delay:0.4s">
@@ -1210,7 +1373,8 @@
                     <div class="skill-tags">
                         <span class="skill-tag">Camunda BPMN</span><span class="skill-tag">Form.io</span><span
                             class="skill-tag">PDF Generation</span><span
-                            class="skill-tag">Delegate Services</span><span class="skill-tag">Gateway Logic</span>
+                            class="skill-tag">Delegate Services</span><span class="skill-tag">Gateway Logic</span><span
+                            class="skill-tag learning">RPA</span>
                     </div>
                 </div>
                 <div class="skill-group">
@@ -1228,6 +1392,14 @@
                             class="skill-tag">System Design</span>
                     </div>
                 </div>
+                <div class="skill-group">
+                    <div class="skill-group-title">Infra &amp; DevOps</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag learning">Linux</span><span
+                            class="skill-tag learning">Docker</span><span class="skill-tag learning">Nginx</span>
+                    </div>
+                    <div class="skill-note">currently expanding at Sapphireims</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1239,32 +1411,55 @@
         </div>
         <div class="projects-grid">
             <div class="project-card reveal" style="transition-delay:0.05s">
-                <div class="project-num">01 / 08</div>
+                <div class="project-num">01 / 09</div>
                 <div class="project-title">Kalci — Personal Finance Tracker</div>
                 <div class="project-desc">Offline-first Android app built around one core mechanic: it listens for
                     incoming bank SMS, sender-filters against known DLT bank shortcodes, and auto-logs debit
-                    transactions as pending entries for the user to confirm — no manual entry needed for day-to-day
+                    transactions as pending entries for the user to confirm. No manual entry needed for day-to-day
                     spend. Five tabs cover budget tracking, a full transaction ledger, EMI/loan amortization (real
                     tenure math, not simple division), and investments including India-specific chit-fund payout
                     logic. A custom Kotlin native module also drives a live home-screen balance widget.</div>
+                <p class="case-result"><span class="case-result-label">Result: </span>zero manual entry for routine
+                    spend tracking, with a native widget shipped through a custom platform module.</p>
                 <div class="project-tags"><span class="proj-tag">React Native</span><span
                         class="proj-tag">Expo</span><span class="proj-tag">TypeScript</span><span
                         class="proj-tag">WatermelonDB</span><span class="proj-tag">Kotlin (Native Module)</span></div>
+                <a href="https://github.com/dharanicp7/Kalci" target="_blank" rel="noopener" class="project-link">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>github.com/dharanicp7/Kalci
+                </a>
             </div>
             <div class="project-card reveal" style="transition-delay:0.1s">
-                <div class="project-num">02 / 08</div>
-                <div class="project-title">Rasha Petroleum – Ops Web App</div>
-                <div class="project-desc">Replaced manual registers with a real-time platform for stock tracking,
-                    sales logging, and financial report generation. Role-based access for field staff, managers, and
-                    admins eliminated end-of-day tallying errors.</div>
+                <div class="project-num">02 / 09</div>
+                <div class="project-title">Rasha — Petroleum Logistics Platform</div>
+                <div class="project-desc">Solo-built, end to end (frontend, backend, third-party API integrations),
+                    after the client was flagging 20-30 discrepancy cases a week from fuel evaporation, theft, and
+                    gross/net weight mismatches between loading and unloading. Investigated the weighbridge process
+                    on-site and rebuilt the discrepancy-detection algorithm around what was actually happening on the
+                    ground, adding a manual-override entry (with required documentation) for whatever remained.</div>
+                <p class="case-result"><span class="case-result-label">Result: </span>weekly discrepancies down to a
+                    residual 1-2, each one auto-resolved or explicitly documented.</p>
                 <div class="project-tags"><span class="proj-tag">React.js</span><span
                         class="proj-tag">Node.js</span><span class="proj-tag">PostgreSQL</span><span
-                        class="proj-tag">RBAC</span></div>
+                        class="proj-tag">RBAC</span><span class="proj-tag">REST APIs</span></div>
+            </div>
+            <div class="project-card reveal" style="transition-delay:0.12s">
+                <div class="project-num">03 / 09</div>
+                <div class="project-title">TANFED — Statewide Government Platform</div>
+                <div class="project-desc">Recognized for technical contribution among 10 interns and promoted to
+                    lead an 8-developer team on TANFED, a ReactJS platform for Tamil Nadu's taluk and regional
+                    cooperative offices. Split time between task delegation, code review, and hands-on development,
+                    then shipped and rolled out across every taluk and regional cooperative office in the state.</div>
+                <div class="project-tags"><span class="proj-tag">React.js</span><span
+                        class="proj-tag">Government Systems</span><span
+                        class="proj-tag">Team Leadership</span><span class="proj-tag">Code Review</span></div>
             </div>
             <div class="project-card reveal" style="transition-delay:0.15s">
-                <div class="project-num">03 / 08</div>
+                <div class="project-num">04 / 09</div>
                 <div class="project-title">Veterinary Clinic &amp; E-Commerce Platform</div>
-                <div class="project-desc">End-to-end platform for clinic owners and pet owners — online appointment
+                <div class="project-desc">End-to-end platform for clinic owners and pet owners: online appointment
                     booking, product catalogue with cart and checkout, and an admin panel for order and inventory
                     management. Full UI/UX designed in Figma first.</div>
                 <div class="project-tags"><span class="proj-tag">React.js</span><span
@@ -1272,16 +1467,18 @@
                         class="proj-tag">Figma</span></div>
             </div>
             <div class="project-card reveal" style="transition-delay:0.2s">
-                <div class="project-num">04 / 08</div>
+                <div class="project-num">05 / 09</div>
                 <div class="project-title">Automated Timetable Scheduling</div>
                 <div class="project-desc">Backend scheduling engine taking faculty availability, room capacity, and
-                    batch requirements as input — automatically generating conflict-free timetables and eliminating
-                    manual semester scheduling.</div>
+                    batch requirements as input, then automatically generating conflict-free timetables and
+                    eliminating manual semester scheduling. Built on FastAPI with a constraint-solver core (Google
+                    OR-Tools) and a PostgreSQL/SQLAlchemy data layer.</div>
                 <div class="project-tags"><span class="proj-tag">Python</span><span
-                        class="proj-tag">MySQL</span><span class="proj-tag">Algorithm Design</span></div>
+                        class="proj-tag">FastAPI</span><span class="proj-tag">OR-Tools</span><span
+                        class="proj-tag">PostgreSQL</span><span class="proj-tag">SQLAlchemy</span></div>
             </div>
             <div class="project-card reveal" style="transition-delay:0.25s">
-                <div class="project-num">05 / 08</div>
+                <div class="project-num">06 / 09</div>
                 <div class="project-title">OIS Order Workflow (Enterprise)</div>
                 <div class="project-desc">End-to-end BPMN order workflow with automated status transitions, email
                     notifications for Generated / Hold / Cancelled states, and dynamic PDF generation via Camunda
@@ -1291,7 +1488,7 @@
                         class="proj-tag">Email Templates</span></div>
             </div>
             <div class="project-card reveal" style="transition-delay:0.3s">
-                <div class="project-num">06 / 08</div>
+                <div class="project-num">07 / 09</div>
                 <div class="project-title">Legal Dashboard &amp; Registers</div>
                 <div class="project-desc">Three-level navigation dashboard for legal document management with
                     date-range filtering, REST API integration, and per-table PDF export with precise column widths
@@ -1301,9 +1498,9 @@
                         class="proj-tag">PDF Export</span></div>
             </div>
             <div class="project-card reveal" style="transition-delay:0.35s">
-                <div class="project-num">07 / 08</div>
+                <div class="project-num">08 / 09</div>
                 <div class="project-title">Customer Data Migration Tool</div>
-                <div class="project-desc">Bulk MySQL migration tool using Python and pandas — generating targeted
+                <div class="project-desc">Bulk MySQL migration tool using Python and pandas, generating targeted
                     JSON_SET UPDATE statements from Excel master data to sync thousands of customer records into a
                     platform JSON store schema.</div>
                 <div class="project-tags"><span class="proj-tag">Python</span><span
@@ -1311,13 +1508,15 @@
                         class="proj-tag">JSON_SET</span></div>
             </div>
             <div class="project-card reveal" style="transition-delay:0.4s">
-                <div class="project-num">08 / 08</div>
+                <div class="project-num">09 / 09</div>
                 <div class="project-title">Government Portal Patches</div>
-                <div class="project-desc">Critical ReactJS patch delivery for TANFED, Agri Online Sales Portal, and
-                    TNeGA — reducing government processing time by 50% and ensuring stability across multiple state
-                    department systems.</div>
+                <div class="project-desc">Critical ReactJS patch delivery and automation for the Agri Online Sales
+                    Portal and TNeGA, including invoice/receipt PDF generation and SMS notification integration for
+                    TNeGA's ration distribution workflow. Reduced government processing time by 50% and kept
+                    multiple state department systems stable.</div>
                 <div class="project-tags"><span class="proj-tag">React.js</span><span
-                        class="proj-tag">Government</span><span class="proj-tag">System Stability</span></div>
+                        class="proj-tag">PDF Generation</span><span class="proj-tag">SMS Integration</span><span
+                        class="proj-tag">Government</span></div>
             </div>
         </div>
     </section>
@@ -1328,7 +1527,7 @@
                 <p class="section-label" style="justify-content:center"><span class="idx">§05</span> Get In Touch</p>
                 <h2 class="section-title">Let's Build<br />Something.</h2>
                 <p class="contact-msg">Open to interesting projects and collaboration opportunities.<br />Drop a
-                    message — I usually respond within 24 hours.</p>
+                    message. I usually respond within 24 hours.</p>
                 <div class="contact-links">
                     <a href="mailto:dropmail.dharanikiran@gmail.com" class="contact-link">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1376,6 +1575,28 @@
             });
         }, { threshold: 0.12 });
         reveals.forEach(function (el) { observer.observe(el); });
+
+        var navToggle = document.querySelector('.nav-toggle');
+        var primaryNav = document.getElementById('primary-nav');
+
+        function closeNav() {
+            navToggle.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('is-open');
+        }
+
+        navToggle.addEventListener('click', function () {
+            var isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!isOpen));
+            primaryNav.classList.toggle('is-open', !isOpen);
+        });
+
+        primaryNav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeNav);
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') { closeNav(); }
+        });
     </script>
 </body>
 
