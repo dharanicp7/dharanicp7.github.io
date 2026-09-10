@@ -1,0 +1,141 @@
+DHARANI KIRAN C S
+Full-Stack Developer
+
+Chennai, Tamil Nadu, India
+Email: dropmail.dharanikiran@gmail.com
+Phone: +91 95000 97315
+GitHub: github.com/dharanicp7
+LinkedIn: linkedin.com/in/dharani-kiran
+
+Experience: 3+ Years | Core Stack: React, Node, Python | Focus: Full-Stack,
+Workflow Automation | Education: M.Sc. IT, Anna University (CEG)
+
+--------------------------------------------------------------------
+SUMMARY
+--------------------------------------------------------------------
+Full-stack engineer who traces problems to root cause before writing
+code. Built production systems solo, led an 8-developer team on a
+statewide government platform, and shipped cross-platform mobile end
+to end.
+
+--------------------------------------------------------------------
+EXPERIENCE
+--------------------------------------------------------------------
+
+Associate Engineer
+Sapphireims -- Chennai, India | Dec 2025 -- Present
+
+- Design and maintain BPMN process automation in Camunda with custom
+  delegate services for enterprise workflow pipelines.
+- Build complex enterprise business forms and data-driven workflow
+  automation end to end, from intake to reporting.
+- Develop and optimize SQL queries and JSON-based data sync for
+  reporting, extraction, and platform migrations.
+- Automate bulk data migrations with Python and pandas, syncing Excel
+  master data into platform JSON stores.
+
+Software Development Engineer
+TK Propeller Digital Solutions LLP -- Chennai, India | Aug 2023 -- Nov 2025
+
+- Solo-built a petroleum logistics platform end to end, covering
+  frontend (React), backend (Node), database (PostgreSQL), and
+  third-party API integrations.
+- Investigated the client's loading/unloading and weighbridge process
+  on-site, then rebuilt the discrepancy-detection algorithm around it.
+  Cut flagged discrepancies from 20-30 per week to a residual 1-2,
+  with a documented manual-override path for the rest.
+- Designed full UI/UX in Figma for two React Native apps, every
+  screen from wireframe to high-fidelity, then built the interfaces
+  with React Native and NativeBase, extending frontend skills from
+  web React to cross-platform mobile.
+- Maintained code quality through unit and integration testing across
+  both platforms, reducing post-deployment issues.
+
+Software Development Engineer Intern
+Vertace Consultant -- Chennai, India | Jan 2023 -- May 2023
+
+- Recognized for technical contribution among a 10-intern cohort and
+  promoted to lead an 8-developer team on TANFED, a Tamil Nadu state
+  government platform mandated for rollout across every taluk and
+  regional cooperative office. Owned task delegation and code review
+  alongside hands-on ReactJS development.
+- Built the invoice/receipt PDF generation and SMS notification
+  integration for TNeGA, Tamil Nadu's e-governance ration
+  distribution (PDS) platform serving every household in the state.
+
+Full Stack Developer Intern
+Quantumics A.I. -- Remote (London, UK) | Jun 2021 -- Dec 2021
+
+- Engineered RESTful APIs enabling efficient manipulation and
+  management of dynamic datasets.
+- Collaborated cross-functionally to analyze problems and ship
+  data-driven solutions that improved system performance.
+
+--------------------------------------------------------------------
+PROJECTS
+--------------------------------------------------------------------
+
+Rasha -- Petroleum Logistics Platform
+Built a petroleum logistics platform solo, covering frontend, backend,
+and third-party API integrations, after the client was flagging 20-30
+discrepancy cases a week from fuel evaporation, theft, and gross/net
+weight mismatches between loading and unloading. Investigated the
+weighbridge process on-site and rebuilt the discrepancy-detection
+algorithm around what was actually happening on the ground, adding a
+manual-override entry (with required documentation) for whatever
+remained.
+Result: weekly discrepancies down to a residual 1-2, each one
+auto-resolved or explicitly documented.
+Stack: React.js, Node.js, PostgreSQL, RBAC, REST APIs
+
+TANFED -- Statewide Government Platform
+Recognized for technical contribution among 10 interns and promoted
+to lead an 8-developer team on TANFED, a ReactJS platform for Tamil
+Nadu's taluk and regional cooperative offices. Split time between
+task delegation, code review, and hands-on development.
+Result: shipped and rolled out across every taluk and regional
+cooperative office in the state.
+Stack: React.js, Government Systems, Team Leadership, Code Review
+
+Kalci -- Personal Finance Tracker
+GitHub: github.com/dharanicp7/Kalci
+Personal project. An offline-first Android app that reads incoming
+bank SMS, filters against known DLT bank shortcodes, and auto-logs
+debit transactions as pending entries, so day-to-day spend needs no
+manual entry. Covers budget tracking, a full transaction ledger,
+EMI/loan amortization with real tenure math, and investments
+including India-specific chit-fund payouts. A custom Kotlin native
+module drives a live home-screen balance widget.
+Result: zero manual entry for routine spend tracking, with a native
+widget shipped through a custom platform module.
+Stack: React Native, Expo, TypeScript, WatermelonDB, Kotlin (Native
+Module)
+
+--------------------------------------------------------------------
+SKILLS
+--------------------------------------------------------------------
+Languages: JavaScript, TypeScript, Python, C#, SQL, C / C++
+
+Frontend & Mobile: React.js, React Native, Angular, NativeBase,
+  HTML / CSS, Figma (UI/UX Design)
+
+Backend & APIs: Node.js, RESTful API Design, Third-Party API
+  Integration, .NET
+
+Database: PostgreSQL, MySQL, SQL Migrations, JSON_EXTRACT / SET,
+  Complex Joins
+
+Workflow & Automation: Camunda BPMN, Form.io, Delegate Services,
+  Gateway Logic, RPA (currently expanding)
+
+Architecture & Practice: System Design, RBAC, Algorithm Design,
+  Agile / Scrum, Unit / Integration Testing, Code Review
+
+Tools & Infra: Git, Linux (currently expanding), Docker (currently
+  expanding), Nginx (currently expanding) -- at Sapphireims
+
+--------------------------------------------------------------------
+EDUCATION
+--------------------------------------------------------------------
+M.Sc. Information Technology
+Anna University -- College of Engineering, Guindy (CEG), Chennai

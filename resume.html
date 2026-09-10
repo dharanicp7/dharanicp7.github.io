@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dharani Kiran C S — Résumé</title>
+    <meta name="description" content="Dharani Kiran C S. Full-stack developer résumé. Root-cause-first engineering across solo-built production systems, statewide government platforms, and cross-platform mobile." />
+    <meta name="theme-color" content="#0A0D12" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://dharani-kiran.github.io/resume.html" />
+    <meta property="og:title" content="Dharani Kiran C S — Résumé" />
+    <meta property="og:description" content="Full-stack developer résumé. Root-cause-first engineering across solo-built production systems, statewide government platforms, and cross-platform mobile." />
+    <meta property="og:image" content="https://dharani-kiran.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dharani-kiran.github.io/og-image.png" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230A0D12'/%3E%3Crect x='4' y='4' width='56' height='56' rx='7' fill='none' stroke='%234FA8D8' stroke-width='2'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%234FA8D8' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #0A0D12;
+            --bg2: #0E131A;
+            --surface: #121924;
+            --border: #223041;
+            --border-strong: #2E4359;
+            --grid-line: rgba(79, 168, 216, 0.05);
+            --accent: #4FA8D8;
+            --accent-dim: #2C7FB0;
+            --accent-wash: rgba(79, 168, 216, 0.08);
+            --signal: #E8A33D;
+            --signal-wash: rgba(232, 163, 61, 0.1);
+            --ink: #B9C7D6;
+            --ink-bright: #EEF4FA;
+            --ink-muted: #5C7086;
+            --ink-faint: #3A4A5C;
+            --display: 'Big Shoulders Display', sans-serif;
+            --sans: 'IBM Plex Sans', sans-serif;
+            --mono: 'IBM Plex Mono', ui-monospace, monospace;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            font-size: 15px;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; }
+
+        .grid-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+                linear-gradient(rgba(79, 168, 216, 0.09) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(79, 168, 216, 0.09) 1px, transparent 1px);
+            background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+            pointer-events: none;
+        }
+
+        main { position: relative; z-index: 1; }
+
+        /* ---------- top bar ---------- */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 3rem;
+            background: rgba(10, 13, 18, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--ink-bright);
+        }
+
+        .nav-logo span { color: var(--accent); }
+        .nav-logo a { text-decoration: none; }
+
+        .topbar-actions { display: flex; gap: 0.75rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.6rem 1.2rem;
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary { background: var(--signal); color: #1a1204; border: 1px solid var(--signal); }
+        .btn-primary:hover { background: transparent; color: var(--signal); box-shadow: 0 0 0 1px var(--signal) inset; }
+        .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--border-strong); }
+        .btn-ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-wash); }
+
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+        .wrap { max-width: 980px; margin: 0 auto; padding: 0 3rem; }
+
+        /* ---------- header / positioning ---------- */
+        .resume-header { padding: 4rem 0 3rem; }
+
+        .header-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.05em;
+            color: var(--ink-muted);
+            margin-bottom: 1rem;
+        }
+
+        .header-eyebrow .prompt { color: var(--accent); }
+
+        .header-name {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(2.6rem, 5.6vw, 4.2rem);
+            line-height: 0.95;
+            color: var(--ink-bright);
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+        }
+
+        .header-name .dot { color: var(--accent); }
+
+        .header-title {
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-top: 0.6rem;
+        }
+
+        .positioning {
+            max-width: 62ch;
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--ink);
+            margin-top: 1.4rem;
+        }
+
+        .spec-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .spec-field { padding: 0.7rem 1.1rem; border-right: 1px solid var(--border); background: var(--surface); }
+        .spec-field:last-child { border-right: none; }
+        .spec-k { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.12em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 0.35rem; }
+        .spec-v { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-bright); }
+        .spec-v.live { color: var(--signal); }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-top: 1.6rem;
+        }
+
+        .contact-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.9rem;
+            border: 1px solid var(--border-strong);
+            border-radius: 2px;
+            text-decoration: none;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--ink);
+            transition: all 0.2s;
+        }
+
+        .contact-pill:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-wash); }
+
+        /* ---------- shared section chrome ---------- */
+        section { position: relative; z-index: 1; padding: 4rem 0; }
+        section + section { border-top: 1px solid var(--border); }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .section-label .idx { color: var(--ink-faint); }
+        .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); max-width: 120px; }
+
+        .section-title {
+            font-family: var(--display);
+            font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+            font-weight: 800;
+            color: var(--ink-bright);
+            line-height: 1;
+            letter-spacing: -0.01em;
+        }
+
+        /* ---------- stats ---------- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            margin-top: 2.4rem;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .stat-card { background: var(--surface); padding: 1.2rem 1.2rem; }
+        .stat-num { font-family: var(--display); font-size: 1.55rem; font-weight: 800; color: var(--accent); line-height: 1.1; }
+        .stat-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.06em; color: var(--ink-muted); margin-top: 0.5rem; text-transform: uppercase; line-height: 1.4; }
+
+        /* ---------- experience ---------- */
+        .exp-timeline { margin-top: 2.6rem; position: relative; }
+        .exp-timeline::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: var(--border); }
+
+        .exp-item { padding-left: 2.2rem; padding-bottom: 2.6rem; position: relative; }
+        .exp-item:last-child { padding-bottom: 0; }
+        .exp-item::before { content: ''; position: absolute; left: -4px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+        .exp-item.is-active::before { background: var(--signal); border-color: var(--signal); box-shadow: 0 0 0 4px var(--signal-wash); }
+
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 0.6rem; }
+        .exp-role { font-family: var(--sans); font-size: 1.02rem; font-weight: 700; color: var(--ink-bright); }
+        .exp-company { color: var(--accent); font-family: var(--mono); font-size: 0.72rem; margin-top: 0.3rem; }
+        .exp-meta { display: flex; align-items: center; gap: 0.7rem; flex-shrink: 0; }
+        .exp-date { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.05em; color: var(--ink-muted); white-space: nowrap; }
+        .exp-status { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; padding: 0.2rem 0.5rem; border-radius: 2px; text-transform: uppercase; white-space: nowrap; }
+        .exp-status.active { color: var(--signal); background: var(--signal-wash); border: 1px solid rgba(232, 163, 61, 0.3); }
+        .exp-status.done { color: var(--ink-muted); background: var(--surface); border: 1px solid var(--border); }
+
+        .exp-bullets { list-style: none; }
+        .exp-bullets li { font-size: 0.82rem; line-height: 1.85; color: var(--ink); padding-left: 1.2rem; position: relative; }
+        .exp-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
+
+        /* ---------- projects (case studies) ---------- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            margin-top: 2.6rem;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .project-card { background: var(--surface); padding: 1.7rem; }
+        .project-num { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; color: var(--ink-faint); margin-bottom: 0.8rem; }
+        .project-title { font-family: var(--sans); font-size: 1rem; font-weight: 700; color: var(--ink-bright); margin-bottom: 0.9rem; line-height: 1.3; }
+
+        .case-para { font-size: 0.78rem; line-height: 1.85; color: var(--ink); margin-bottom: 0.7rem; }
+        .case-result { font-size: 0.78rem; line-height: 1.75; color: var(--ink-bright); }
+        .case-result-label { color: var(--accent); font-weight: 600; }
+
+        .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
+        .proj-tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.03em; padding: 0.22rem 0.5rem; border: 1px solid var(--border); border-radius: 2px; color: var(--accent); }
+
+        .project-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.9rem; font-family: var(--mono); font-size: 0.65rem; color: var(--ink-muted); text-decoration: none; }
+        .project-link:hover { color: var(--accent); }
+
+        /* ---------- skills ---------- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1px;
+            margin-top: 2.4rem;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .skill-group { background: var(--bg2); padding: 1.3rem 1.4rem; }
+        .skill-group-title { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--border); }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+        .skill-tag { padding: 0.3rem 0.65rem; font-family: var(--mono); font-size: 0.66rem; border: 1px solid var(--border); border-radius: 2px; color: var(--ink); }
+        .skill-tag.learning { color: var(--signal); border-color: rgba(232, 163, 61, 0.3); }
+        .skill-note { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-top: 0.9rem; }
+
+        footer {
+            padding: 1.4rem 3rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--mono);
+            font-size: 0.62rem;
+            letter-spacing: 0.04em;
+            color: var(--ink-faint);
+        }
+
+        ::selection { background: var(--accent-wash); color: var(--ink-bright); }
+
+        @media (max-width: 900px) {
+            .spec-strip { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .topbar { padding: 1rem 1.5rem; }
+            .wrap { padding: 0 1.5rem; }
+            .resume-header { padding: 3rem 0 2rem; }
+            section { padding: 3rem 0; }
+            footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.4rem 1.5rem; }
+        }
+
+        /* ================= PRINT / PDF — ATS-SAFE ================= */
+        @media print {
+            @page { size: A4; margin: 9mm 11mm; }
+
+            * { animation: none !important; transition: none !important; box-shadow: none !important; }
+
+            html, body { background: #ffffff !important; color: #1a1a1a !important; font-size: 9.2pt; }
+
+            .grid-bg, .topbar, footer, .project-link svg { display: none !important; }
+
+            main { position: static; }
+
+            .wrap { max-width: 100%; padding: 0; margin: 0; }
+
+            .resume-header { padding: 0 0 5pt; }
+
+            .header-eyebrow { display: none; }
+
+            .header-name { color: #0a0d12 !important; font-size: 19pt; -webkit-text-fill-color: #0a0d12; }
+            .header-name .dot { color: #2C7FB0 !important; }
+
+            .header-title { color: #2C7FB0 !important; font-size: 8.4pt; margin-top: 2pt; }
+
+            .positioning { color: #2a2a2a !important; font-size: 8.2pt; line-height: 1.42; margin-top: 4pt; max-width: 100%; }
+
+            .spec-strip { border-color: #ccc !important; margin-top: 5pt; }
+            .spec-field { background: #f7f7f7 !important; border-color: #ddd !important; padding: 3pt 7pt; }
+            .spec-k { color: #888 !important; font-size: 5.2pt; }
+            .spec-v { color: #111 !important; font-size: 6.8pt; }
+            .spec-v.live { color: #b06f1f !important; }
+
+            .contact-row { margin-top: 5pt; gap: 5pt; }
+            .contact-pill { border-color: #ccc !important; color: #1a1a1a !important; padding: 2pt 6pt; font-size: 6.4pt; }
+
+            section { padding: 5pt 0; page-break-inside: auto; }
+            section + section { border-color: #ddd !important; }
+
+            .section-label { color: #2C7FB0 !important; font-size: 6pt; margin-bottom: 3pt; }
+            .section-label::after { background: #ddd !important; }
+            .section-title { color: #0a0d12 !important; font-size: 11pt; }
+
+            .stats-grid { margin-top: 5pt; background: #ddd !important; border-color: #ddd !important; display: none; }
+
+            .exp-timeline { margin-top: 5pt; }
+            .exp-timeline::before { background: #ddd !important; }
+            .exp-item { padding-left: 10pt; padding-bottom: 5.5pt; page-break-inside: avoid; }
+            .exp-item::before { border-color: #2C7FB0 !important; background: #fff !important; width: 5pt; height: 5pt; left: -2.5pt; }
+            .exp-item.is-active::before { background: #E8A33D !important; border-color: #E8A33D !important; }
+            .exp-header { margin-bottom: 2pt; }
+            .exp-role { color: #0a0d12 !important; font-size: 9pt; }
+            .exp-company { color: #2C7FB0 !important; font-size: 7.2pt; margin-top: 1pt; }
+            .exp-date { color: #777 !important; font-size: 6.6pt; }
+            .exp-status { display: none; }
+            .exp-bullets li { color: #2a2a2a !important; font-size: 7.6pt; line-height: 1.45; padding-left: 8pt; }
+            .exp-bullets li + li { margin-top: 1.5pt; }
+            .exp-bullets li::before { color: #2C7FB0 !important; }
+
+            .projects-grid { grid-template-columns: repeat(3, 1fr); margin-top: 5pt; background: #ddd !important; border-color: #ddd !important; gap: 1pt; }
+            .project-card { background: #ffffff !important; padding: 6pt 7pt; page-break-inside: avoid; }
+            .project-num { color: #999 !important; font-size: 5.2pt; margin-bottom: 2pt; }
+            .project-title { color: #0a0d12 !important; font-size: 7.6pt; margin-bottom: 2.5pt; }
+            .case-para { color: #2a2a2a !important; font-size: 6.9pt; line-height: 1.4; margin-bottom: 3pt; }
+            .case-result { color: #111 !important; font-size: 6.9pt; line-height: 1.4; }
+            .case-result-label { color: #2C7FB0 !important; font-weight: 600; }
+            .proj-tag { color: #2C7FB0 !important; border-color: #ddd !important; font-size: 5.2pt; padding: 0.5pt 3.5pt; }
+            .project-tags { margin-top: 3pt; gap: 2pt; }
+            .project-link { color: #555 !important; font-size: 5.8pt; margin-top: 2.5pt; }
+
+            .skills-grid { margin-top: 5pt; background: transparent !important; border: none !important; display: block; }
+            .skill-group { background: #ffffff !important; border: 1px solid #ddd; padding: 4.5pt 6pt; display: inline-block; width: 48.7%; vertical-align: top; margin: 0 0 1pt 0; page-break-inside: avoid; }
+            .skill-group:nth-child(odd) { margin-right: 1pt; }
+            .skill-group-title { color: #2C7FB0 !important; font-size: 5.8pt; border-color: #ddd !important; margin-bottom: 3pt; padding-bottom: 2pt; }
+            .skill-tags { gap: 2.5pt; }
+            .skill-tag { color: #2a2a2a !important; border-color: #ddd !important; font-size: 6.4pt; padding: 1pt 4pt; }
+            .skill-tag.learning { color: #b06f1f !important; border-color: #e8c896 !important; }
+            .skill-note { color: #999 !important; font-size: 5.2pt; margin-top: 4pt; }
+
+            a[href]::after { content: none !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-bg"></div>
+
+    <div class="topbar">
+        <div class="nav-logo"><a href="index.html">DK<span>.</span></a></div>
+        <div class="topbar-actions">
+            <a href="index.html" class="btn btn-ghost">Portfolio</a>
+            <a href="resume.txt" class="btn btn-ghost" download>Plain Text</a>
+            <a href="resume.pdf" class="btn btn-primary" download>Download PDF</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="wrap">
+            <header class="resume-header">
+                <p class="header-eyebrow"><span class="prompt">&gt;</span> resume --role=full_stack_developer</p>
+                <h1 class="header-name">Dharani Kiran C S<span class="dot">.</span></h1>
+                <p class="header-title">Full-Stack Developer</p>
+                <p class="positioning">Full-stack engineer who traces problems to root cause before writing code.
+                    Built production systems solo, led an 8-developer team on a statewide government platform, and
+                    shipped cross-platform mobile end to end.</p>
+
+                <div class="spec-strip">
+                    <div class="spec-field">
+                        <div class="spec-k">Experience</div>
+                        <div class="spec-v">3+ Years</div>
+                    </div>
+                    <div class="spec-field">
+                        <div class="spec-k">Core Stack</div>
+                        <div class="spec-v">React · Node · Python</div>
+                    </div>
+                    <div class="spec-field">
+                        <div class="spec-k">Focus</div>
+                        <div class="spec-v">Full-Stack · Workflow Automation</div>
+                    </div>
+                    <div class="spec-field">
+                        <div class="spec-k">Education</div>
+                        <div class="spec-v">M.Sc. IT · Anna Univ. (CEG)</div>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <a href="mailto:dropmail.dharanikiran@gmail.com" class="contact-pill">dropmail.dharanikiran@gmail.com</a>
+                    <a href="tel:+919500097315" class="contact-pill">+91 95000 97315</a>
+                    <span class="contact-pill" style="cursor:default">Chennai, Tamil Nadu, India</span>
+                    <a href="https://github.com/dharanicp7" target="_blank" rel="noopener" class="contact-pill">github.com/dharanicp7</a>
+                    <a href="https://linkedin.com/in/dharani-kiran" target="_blank" rel="noopener" class="contact-pill">linkedin.com/in/dharani-kiran</a>
+                </div>
+            </header>
+
+            <section id="experience">
+                <p class="section-label"><span class="idx">§01</span> Work History</p>
+                <h2 class="section-title">Experience</h2>
+
+                <div class="exp-timeline">
+                    <div class="exp-item is-active">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-role">Associate Engineer</div>
+                                <div class="exp-company">Sapphireims · Chennai</div>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Dec 2025 — Present</span>
+                                <span class="exp-status active">Active</span>
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Design and maintain BPMN process automation in Camunda with custom delegate services for enterprise workflow pipelines.</li>
+                            <li>Build complex enterprise business forms and data-driven workflow automation end to end, from intake to reporting.</li>
+                            <li>Develop and optimize SQL queries and JSON-based data sync for reporting, extraction, and platform migrations.</li>
+                            <li>Automate bulk data migrations with Python and pandas, syncing Excel master data into platform JSON stores.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-role">Software Development Engineer</div>
+                                <div class="exp-company">TK Propeller Digital Solutions LLP · Chennai</div>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Aug 2023 — Nov 2025</span>
+                                <span class="exp-status done">Complete</span>
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Solo-built a petroleum logistics platform end to end, covering frontend (React), backend (Node), database (PostgreSQL), and third-party API integrations.</li>
+                            <li>Investigated the client's loading/unloading and weighbridge process on-site, then rebuilt the discrepancy-detection algorithm around it. Cut flagged discrepancies from 20-30 per week to a residual 1-2, with a documented manual-override path for the rest.</li>
+                            <li>Designed full UI/UX in Figma for two React Native apps, every screen from wireframe to high-fidelity, then built the interfaces with React Native and NativeBase, extending frontend skills from web React to cross-platform mobile.</li>
+                            <li>Maintained code quality through unit and integration testing across both platforms, reducing post-deployment issues.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-role">Software Development Engineer Intern</div>
+                                <div class="exp-company">Vertace Consultant · Chennai</div>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Jan 2023 — May 2023</span>
+                                <span class="exp-status done">Complete</span>
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Recognized for technical contribution among a 10-intern cohort and promoted to lead an 8-developer team on TANFED, a Tamil Nadu state government platform mandated for rollout across every taluk and regional cooperative office. Owned task delegation and code review alongside hands-on ReactJS development.</li>
+                            <li>Built the invoice/receipt PDF generation and SMS notification integration for TNeGA, Tamil Nadu's e-governance ration distribution (PDS) platform serving every household in the state.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-role">Full Stack Developer Intern</div>
+                                <div class="exp-company">Quantumics A.I. · Remote (London)</div>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Jun 2021 — Dec 2021</span>
+                                <span class="exp-status done">Complete</span>
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Engineered RESTful APIs enabling efficient manipulation and management of dynamic datasets.</li>
+                            <li>Collaborated cross-functionally to analyze problems and ship data-driven solutions that improved system performance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <p class="section-label"><span class="idx">§02</span> Case Studies</p>
+                <h2 class="section-title">Projects</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-num">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">8</div>
+                        <div class="stat-label">Developer Team Led · TANFED</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">20-30 → 1-2</div>
+                        <div class="stat-label">Weekly Discrepancies Cut · Rasha</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">1</div>
+                        <div class="stat-label">Production System Owned Solo, End to End</div>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-num">01 / 03</div>
+                        <div class="project-title">Rasha — Petroleum Logistics Platform</div>
+                        <p class="case-para">Built a petroleum logistics platform solo, covering frontend, backend, and third-party API integrations, after the client was flagging 20-30 discrepancy cases a week from fuel evaporation, theft, and gross/net weight mismatches between loading and unloading. Investigated the weighbridge process on-site and rebuilt the discrepancy-detection algorithm around what was actually happening on the ground, adding a manual-override entry (with required documentation) for whatever remained.</p>
+                        <p class="case-result"><span class="case-result-label">Result: </span>weekly discrepancies down to a residual 1-2, each one auto-resolved or explicitly documented.</p>
+                        <div class="project-tags">
+                            <span class="proj-tag">React.js</span><span class="proj-tag">Node.js</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">RBAC</span><span class="proj-tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-num">02 / 03</div>
+                        <div class="project-title">TANFED — Statewide Government Platform</div>
+                        <p class="case-para">Recognized for technical contribution among 10 interns and promoted to lead an 8-developer team on TANFED, a ReactJS platform for Tamil Nadu's taluk and regional cooperative offices. Split time between task delegation, code review, and hands-on development.</p>
+                        <p class="case-result"><span class="case-result-label">Result: </span>shipped and rolled out across every taluk and regional cooperative office in the state.</p>
+                        <div class="project-tags">
+                            <span class="proj-tag">React.js</span><span class="proj-tag">Government Systems</span><span class="proj-tag">Team Leadership</span><span class="proj-tag">Code Review</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-num">03 / 03</div>
+                        <div class="project-title">Kalci — Personal Finance Tracker</div>
+                        <p class="case-para">Personal project. An offline-first Android app that reads incoming bank SMS, filters against known DLT bank shortcodes, and auto-logs debit transactions as pending entries, so day-to-day spend needs no manual entry. Covers budget tracking, a full transaction ledger, EMI/loan amortization with real tenure math, and investments including India-specific chit-fund payouts. A custom Kotlin native module drives a live home-screen balance widget.</p>
+                        <p class="case-result"><span class="case-result-label">Result: </span>zero manual entry for routine spend tracking, with a native widget shipped through a custom platform module.</p>
+                        <div class="project-tags">
+                            <span class="proj-tag">React Native</span><span class="proj-tag">Expo</span><span class="proj-tag">TypeScript</span><span class="proj-tag">WatermelonDB</span><span class="proj-tag">Kotlin</span>
+                        </div>
+                        <a href="https://github.com/dharanicp7/Kalci" target="_blank" rel="noopener" class="project-link">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            github.com/dharanicp7/Kalci
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <p class="section-label"><span class="idx">§03</span> Technical Skills</p>
+                <h2 class="section-title">The Stack</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <div class="skill-group-title">Languages</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">Python</span><span class="skill-tag">C#</span><span class="skill-tag">SQL</span><span class="skill-tag">C / C++</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Frontend &amp; Mobile</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span><span class="skill-tag">React Native</span><span class="skill-tag">Angular</span><span class="skill-tag">NativeBase</span><span class="skill-tag">HTML / CSS</span><span class="skill-tag">Figma (UI/UX)</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Backend &amp; APIs</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span><span class="skill-tag">RESTful API Design</span><span class="skill-tag">Third-Party API Integration</span><span class="skill-tag">.NET</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Database</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">SQL Migrations</span><span class="skill-tag">JSON_EXTRACT / SET</span><span class="skill-tag">Complex Joins</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Workflow &amp; Automation</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Camunda BPMN</span><span class="skill-tag">Form.io</span><span class="skill-tag">Delegate Services</span><span class="skill-tag">Gateway Logic</span><span class="skill-tag learning">RPA</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Architecture &amp; Practice</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">System Design</span><span class="skill-tag">RBAC</span><span class="skill-tag">Algorithm Design</span><span class="skill-tag">Agile / Scrum</span><span class="skill-tag">Unit / Integration Testing</span><span class="skill-tag">Code Review</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Tools &amp; Infra</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span><span class="skill-tag learning">Linux</span><span class="skill-tag learning">Docker</span><span class="skill-tag learning">Nginx</span>
+                        </div>
+                        <div class="skill-note">tagged items currently expanding at Sapphireims</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <span>© 2026 Dharani Kiran C S. All rights reserved.</span>
+        <span>resume.html · rev 2026.09</span>
+    </footer>
+
+</body>
+
+</html>
